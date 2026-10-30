@@ -1,0 +1,23 @@
+---
+title: "Filters and AutoMod"
+description: "Configure focused filters without treating ordinary profanity as a violation."
+---
+
+## Inspect current settings
+
+List the current configuration before changing it. Enable only the modules needed in each channel.
+
+```text
+,filter list
+```
+
+## Configure invite filtering
+
+```text
+,filter invites #chat true 5
+,filter invites punishment timeout 10m
+```
+
+## Avoid false positives
+
+Test short words inside normal sentences, joined words, punctuation, and Unicode variants. Severe-content rules should target clearly abusive content rather than ordinary swearing.

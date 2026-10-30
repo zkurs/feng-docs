@@ -1,0 +1,24 @@
+---
+title: "Anti-raid"
+description: "Configure join-rate protection and account checks."
+---
+
+## Inspect configuration
+
+Review the active raid settings and the server's normal join pattern before changing thresholds.
+
+```text
+,antiraid config
+```
+
+## Choose a response
+
+Use a response proportionate to the signal. A sudden join spike may justify temporary containment, while permanent bans require stronger evidence.
+
+```text
+,antiraid configure true 7 true 10 kick false
+```
+
+## Verify the gate
+
+After configuration, test with a controlled account and confirm verified members can still join normally.

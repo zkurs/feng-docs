@@ -1,0 +1,32 @@
+---
+title: "Introduction"
+description: "What Feng does and what to check before setup."
+---
+
+Feng combines moderation, server security, tickets, personal voice rooms, logging, music tools, and community utilities in one Discord bot.
+
+## Before you start
+
+Feng uses `,` as its default prefix. Keep Feng's role above every member or role it needs to manage, and grant only the Discord permissions required by the features you enable.
+
+```text
+,help ban
+,prefix set !
+```
+
+<Warning>
+Discord hierarchy still applies. Administrator permission does not let Feng manage a role above its own.
+</Warning>
+
+## Find a command
+
+Use the [command directory](https://feng.up.railway.app/commands) to search public commands. Run `,help <command>` in Discord for the current syntax.
+
+## Recommended setup order
+
+<Steps>
+  <Step title="Invite and place Feng">Move Feng above the roles it needs to manage.</Step>
+  <Step title="Configure one feature">Start with a reversible, low-risk feature.</Step>
+  <Step title="Test with a non-staff account">Confirm both access and denial behavior.</Step>
+  <Step title="Check logs">Verify the response, role or channel change, and staff log.</Step>
+</Steps>

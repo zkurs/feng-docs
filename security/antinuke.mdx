@@ -1,0 +1,26 @@
+---
+title: "Anti-nuke"
+description: "Protect high-impact server actions with measured thresholds."
+---
+
+## Review before enabling
+
+Inspect the current configuration before enabling enforcement. Base thresholds on normal staff activity instead of copying values from another server.
+
+```text
+,antinuke settings
+```
+
+## Configure modules
+
+Each module should have a clear action threshold, time window, and consequence.
+
+```text
+,antinuke module role 3 10 strip
+```
+
+## Whitelists
+
+Whitelist as few accounts as possible. A bot account is not automatically safe, and a broad whitelist removes an important security boundary.
+
+<Warning>Test with reversible actions. Never validate anti-nuke by damaging a production server.</Warning>
