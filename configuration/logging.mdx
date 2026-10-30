@@ -1,0 +1,26 @@
+---
+title: "Logging"
+description: "Send the right events to the right staff channels."
+---
+
+## List supported events
+
+```text
+,log events
+```
+
+## Add a destination
+
+Separate high-volume message logs from moderation and security logs so important actions remain readable.
+
+```text
+,log add #logs messages
+```
+
+## Debug missing logs
+
+Check Feng's channel access, event configuration, and diagnostics. Discord audit-log events can arrive later than message events.
+
+```text
+,log debug invites
+```

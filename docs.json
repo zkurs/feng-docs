@@ -1,72 +1,57 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Feng",
+  "description": "Setup and reference guides for the Feng Discord bot.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#b85f67",
+    "light": "#d89aa0",
+    "dark": "#8f353d"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/feng-avatar.png",
+  "appearance": {"default": "dark", "strict": true},
   "navigation": {
-    "pages": [
+    "groups": [
+      {"group": "Overview", "pages": ["overview/introduction", "overview/setup"]},
+      {"group": "Security", "pages": ["security/antinuke", "security/antiraid"]},
+      {"group": "Moderation", "pages": ["moderation/overview", "moderation/filters"]},
       {
-        "group": "Getting Started",
+        "group": "Server configuration",
         "pages": [
-          "index",
-          "quickstart"
+          "configuration/logging",
+          "configuration/tickets",
+          "configuration/voicemaster",
+          "configuration/autoresponders"
         ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+      },
+      {"group": "Integrations", "pages": ["integrations/spotify", "integrations/lastfm"]},
+      {"group": "Resources", "pages": ["resources/syntax"]},
+      {"group": "Troubleshooting", "pages": ["troubleshooting/common-issues"]}
+    ]
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
+  "logo": {"light": "/feng-avatar.png", "dark": "/feng-avatar.png"},
   "navbar": {
     "links": [
-      {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
-      }
+      {"label": "Commands", "href": "https://feng.up.railway.app/commands"},
+      {"label": "Status", "href": "https://feng.up.railway.app/status"}
     ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
-    }
+    "primary": {"type": "button", "label": "Feng home", "href": "https://feng.up.railway.app/"}
   },
-  "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
+  "seo": {
+    "metatags": {"theme-color": "#0a0708", "og:site_name": "Feng documentation"},
+    "indexing": "navigable"
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/zkurs/feng-docs",
+      "discord": "https://discord.gg/grQSQpRy6"
     }
-  }
+  },
+  "redirects": [
+    {"source": "/", "destination": "/overview/introduction"},
+    {"source": "/index", "destination": "/overview/introduction"},
+    {"source": "/quickstart", "destination": "/overview/setup"},
+    {"source": "/commands", "destination": "https://feng.up.railway.app/commands"},
+    {"source": "/status", "destination": "https://feng.up.railway.app/status"}
+  ]
 }

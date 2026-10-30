@@ -1,0 +1,25 @@
+---
+title: "Command syntax"
+description: "Read Feng command examples and provide arguments correctly."
+---
+
+## Required and optional values
+
+Angle brackets mark required values. Square brackets mark optional values. Do not type the brackets themselves.
+
+- `<member>` is required.
+- `[reason]` is optional.
+- Subcommands follow their parent command.
+
+## Members and channels
+
+Where supported, provide a mention, username, or Discord ID for a user. Use a channel mention or channel ID for a channel.
+
+```text
+,whois 1308959362349269045
+,purge @member 30 #general
+```
+
+## Durations and reasons
+
+Compact durations such as `10m`, `2h`, and `1d` are accepted by commands that document a duration. Put the reason last so it can contain spaces.
